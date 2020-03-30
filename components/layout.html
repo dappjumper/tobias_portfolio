@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-aside></app-aside>
+<div v-bind:class="{minimized: (env.minimized == 'yes' ? true : false)}">
+	<transition name="dash">
+		<main v-if="env.page == 'Dashboard'">
+			<dashboard-content module="dashboard"></dashboard-content>
+	    </main>
+	</transition>
+
+	<transition name="dash">
+		<main v-if="env.page == 'My bots'">
+	      	<bots-content module="bots"></bots-content>
+	    </main>
+	</transition>
+
+	<transition name="dash">
+			<main v-if="env.page == 'My account'">
+		      	<account-content module="accounts"></account-content>
+		    </main>
+	</transition>
+
+	<transition name="dash">
+		<main v-if="env.page == 'Billing'">
+	      	<billing-content module="billing"></billing-content>
+	    </main>
+	</transition>
+</div>
+
+<style>
+	.minimized main {
+		left:64px;
+	}
+</style>

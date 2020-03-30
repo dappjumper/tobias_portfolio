@@ -1,0 +1,677 @@
+*:not(input), .chatSend {
+  user-select: none;
+}
+
+.chatSend {
+  cursor: pointer!important;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  max-height: 64px;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 64px;
+  overflow: hidden;
+}
+
+aside {
+  z-index: 1;
+  max-width: 250px;
+}
+
+main, aside, aside li, aside ul, aside > *:first-child {
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 150%;
+  font-weight: 800;
+  cursor: pointer;
+  padding-top: 18px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  max-height: 64px;
+  height: 64px;
+  overflow: hidden;
+  max-width: 250px;
+}
+
+.logo i {
+  width: 61px;
+  max-width: 61px;
+}
+
+aside ul {
+  position: fixed;
+  z-index: 2;
+  top: 64px;
+  left: 0px;
+  width: 100%;
+  max-width: 250px;
+  font-size: var(--aside-size);
+}
+
+article button i {
+  display: block;
+  width: 32px;
+}
+
+.bot_li {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.bot_li > * {
+  display: inline-block;
+}
+
+.bot_li i {
+  width: 32px;
+}
+
+article button {
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-size: var(--aside-size);
+}
+
+aside li {
+  position: relative;
+  float: left;
+  padding: 16px 25px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+article button {
+  padding: 16px 25px;
+  text-align: left;
+  cursor: pointer;
+}
+
+article input {
+  padding: 16px 25px;
+}
+
+article button i {
+}
+
+aside li {
+  transition: all .1s;
+}
+
+aside li {
+  padding: 32px 32px 32px 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 64px;
+  opacity: 0.8;
+}
+
+aside li i {
+  width: 66px;
+  height: 64px;
+  position: relative;
+  top: -32px;
+  left: -34px;
+  box-sizing: border-box;
+  max-height: 64px;
+  display: inline-block;
+  opacity: 0.5;
+  transition: all .1s;
+}
+
+aside li i:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+aside li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 21px 25px 25px 84px;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 64px;
+  height: 64px;
+  display: block;
+  transition: all .1s;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+aside li {
+  -webkit-tap-highlight-color: transparent;
+}
+
+aside li:hover i, aside li.active i {
+  opacity: 1;
+}
+
+#onboard_view {
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  max-width: var(--fit-width);
+  max-height: var(--fit-height);
+}
+
+.center_element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.center_text {
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--bigtext);
+}
+
+h2 {
+  font-size: var(--mediumtext);
+}
+
+.minimizer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  height: auto;
+  transition: all .1s;
+  overflow: hidden;
+}
+
+.logo, aside, aside ul, .logo span, li span {
+  white-space: nowrap;
+  transition: all .1s;
+}
+
+.minimized .logo, .minimized aside, .minimized aside ul {
+  max-width: 64px;
+  overflow: hidden;
+}
+
+.minimized aside li span, .minimized .logo span {
+  opacity: 0;
+}
+
+.minimizer {
+  width: 100%;
+  max-width: 250px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 28px;
+  text-align: right;
+}
+
+.minimized .minimizer {
+  border-radius: 0!important;
+}
+
+main {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+main .page {
+  padding-bottom:100px;
+}
+
+@media (orientation:landscape) {
+    /* Portrait styles */;
+}
+
+.feed * {
+  cursor: text;
+  user-select: text!important;
+}
+
+.chatSend {
+  float: right;
+  margin-top: -60px;
+  margin-top: -73px;
+  border-width: 5px!important;
+  box-sizing: border-box;
+  margin-right: 0px;
+  z-index: 1;
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+li {
+  touch-action: manipulation;
+}
+
+aside {
+  user-select: none;
+}
+
+main {
+  position: absolute;
+  top: 64px;
+  left: 250px;
+  transition: all .1s;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 250px;
+}
+
+.pageTitle {
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  transition: all .1s;
+  width: 100%;
+  padding-top: 18px;
+  text-transform: capitalize;
+  padding-left: 32px;
+  font-size: 150%;
+  height: 64px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-right: 250px;
+}
+
+main article {
+  margin: 32px;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.minimized .pageTitle {
+  left: 64px;
+}
+
+.minimized main {
+  left: 64px;
+  padding-right: 64px;
+}
+
+h1 {
+  font-size: var(--bigtext);
+}
+
+h2 {
+  font-size: var(--mediumtext);
+}
+
+p {
+  font-size: var(--text);
+}
+
+.toolbar {
+  padding: 0!important;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.toolbar button {
+  border-radius: 4px;
+  border: none!important;
+  margin-top: 0;
+}
+
+.loading input, .loading button, .saving, .loading select {
+  opacity: 0.5!important;
+  pointer-events: none;
+}
+
+.small,.bot_type {
+  opacity: 0.8;
+  font-size: 80%;
+  display: inline-block;
+}
+
+.count {
+  margin-left: 8px;
+  opacity: 0.2;
+  font-family: monospace;
+  height: 16px;
+  width: 18px!important;
+  font-size: 15px;
+  padding-top: 2px;
+  padding-right: 1px;
+  margin-bottom: -3px;
+  font-weight: 800;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.bot_type {
+  text-align: right;
+  margin-top: 8px;
+  width: auto!important;
+  padding-left: 8px!important;
+  padding-right: 8px!important;
+  padding-top: 3px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.feed li > div {
+  display: inline-block;
+}
+
+.feed .text {
+  display: block;
+}
+
+.feed {
+  margin-left: 16px;
+}
+
+.feed li {
+  padding: 4px 8px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.feed .text {
+  margin-bottom: 4px;
+  line-height: 20px;
+}
+
+aside li.active {
+  cursor: default;
+}
+
+
+/* Landscape */
+@media screen and (max-device-aspect-ratio: 1/1), (max-aspect-ratio: 1/1){
+  .pageTitle {
+    white-space: nowrap;
+    left: 64px!important;
+  }
+
+  main {
+    left: 64px;
+    padding-right: 64px;
+  }
+
+  .logo,  aside,  aside ul {
+    max-width: 64px;
+    overflow: hidden;
+  }
+
+  li span,  .logo span {
+    opacity: 0;
+  }
+
+    /* Landscape styles */
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  aside ul, aside, aside {
+    top: 100%!important;
+    margin-top: -100px!important;
+    max-width: 100%!important;
+    width: 100%!important;
+  }
+
+  aside li {
+    padding: 50px 0;
+    width: 25%!important;
+  }
+
+  aside li span {
+    display: block;
+  }
+
+  aside li i {
+    background: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    left: 0;
+  }
+
+  main {
+    left: 0!important;
+    padding-right: 0!important;
+    padding-bottom: 100px!important;
+  }
+
+  button, input[type="text"], select {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .chatSend {
+    text-align: center;
+    float: none;
+    margin-top: 0;
+  }
+
+  input {
+    text-align: center;
+  }
+
+  button, input, .groupInfo {
+    width: 100%;
+    text-align: center!important;
+  }
+
+  .groupInfo {
+    padding: 8px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .bot_li {
+    width: 100%;
+    margin-left: 0px;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .chatSend {
+    margin-bottom: 32px;
+  }
+
+  .count.bot_type {
+    display: block;
+    text-align: center;
+    margin-left: 0!important;
+    opacity: 0.5!important;
+  }
+
+  ul {
+    margin-left: 0!important;
+  }
+}
+
+.groupInfo {
+  margin-bottom: 16px;
+}
+
+input[type="checkbox"] {
+  width: 32px;
+}
+
+.exit {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 999999999;
+  color: #fafafa;
+  background: rgb(200,50,50);
+  cursor: pointer;
+}
+
+.exit i {
+  font-size: 32px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.dash-enter-active {
+  transition: all .1s ease;
+  transition-delay: .1s;
+}
+
+.dash-leave-active {
+  transition: all .05s ease;
+}
+
+.dash-enter, .dash-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.header-enter-active {
+  transition: all .3s ease;
+  transition-delay: .1s;
+}
+
+.header-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.header-enter, .header-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.aside-enter-active {
+  transition: all .3s ease;
+  transition-delay: .1s;
+}
+
+.aside-leave-active {
+  transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.aside-enter, .aside-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.element-enter-active {
+  transition: all .1s ease;
+  max-height: 100vw;
+}
+
+.element-leave-active {
+  max-height: 100vw;
+  transition: all .1s ease;
+}
+
+.element-enter, .element-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-10px);
+  opacity: 0;
+  max-height: 0;
+}
+
+.loading {
+  background:white;
+  height:100%;
+  width:100%;
+  content:""
+}
+
+#app main {
+  overflow-y:scroll!important;
+  max-height:32px!important;
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+
+.tab-enter, .tab-leave-to {
+  transition:all .1s;
+  opacity:0;
+  transform:translate(0, 32px);
+  max-height:0;
+  float:left;
+}
+
+.tab-enter-active {
+  transition:all .1s;
+  max-height:0;
+}
+.tab-leave-active {
+  transition:all .05s;
+}
+
+.state-enter, .state-leave-to {
+  transition:all .2s;
+  opacity:0;
+}
+
+.state-enter-active {
+  transition:all .2s;
+
+}
+.state-leave-active {
+  transition:all .2s;
+}
+
+.swap-enter, .swap-leave-to {
+    transition:all .2s;
+    opacity:0;
+    max-width:0;
+    overflow:visible;
+    margin-left:8px;
+}
+
+.swap-enter-active {
+  transition:all .2s;
+}
+.swap-leave-active {
+  transition:all .1s;
+  opacity:0;
+  margin-left:-8px;
+  position:absolute;
+}

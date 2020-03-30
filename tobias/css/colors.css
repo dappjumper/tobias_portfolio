@@ -1,0 +1,125 @@
+:root {
+		--body-background: rgb(230,230,230);
+		--body-color: #333333;
+
+		--aside-background: rgb(250,250,250);
+		--aside-color: #0d1b21;
+
+		--accent: #fafafa;
+
+		--logo-color: #fafafa;
+		--logo-background: #0F2027;
+
+		--highlight: rgba(85,85,85,0.2);
+		--shadow: rgba(200,200,200,0.2);
+	}
+
+article button, article input {
+	color:var(--body-color);
+	margin-top:16px;
+	margin-right:16px;
+	outline:none;
+	border:none;
+}
+
+article button i {
+	background:none!important;
+}
+
+body {
+	color: var(--body-color);
+	background:var(--body-background);
+}
+
+
+aside {
+	background-color: var(--aside-background);
+}
+
+aside li, article button, article input {
+	background-color:var(--aside-background);
+
+}
+
+article input {
+	border:5px solid var(--body-background);
+}
+
+aside li i, article button i {
+	background-color:var(--highlight);
+}
+
+aside li i {
+	z-index:3;
+}
+
+aside li span {
+	z-index:2;
+}
+
+.minimizer {
+	background-color:var(--aside-background);
+}
+
+aside li:hover,article button:hover, .minimizer:hover, .bot_li:hover {
+	background-color:var(--highlight);
+}
+
+.minimized .minimizer {
+
+}
+
+aside li.active * {
+	background:;
+	background-color:var(--body-background);
+}
+
+aside li.active i {
+	background:var(--logo-background);
+	color:var(--logo-color);
+}
+
+aside li.active {
+	opacity:1;
+	background-color:var(--logo-background);
+}
+
+.logo {
+	background-color:var(--logo-background);
+	color:var(--logo-color);
+}
+
+.pageTitle {
+	color:var(--logo-color);
+	background-color:var(--logo-background);
+}
+
+main article, article button {
+	background-color:var(--aside-background);
+	border:1px solid var(--highlight);
+}
+
+article button[disabled] {
+	pointer-events: none;
+	opacity:0.5;
+}
+
+
+article button {
+	border:1px solid var(--highlight)!important;
+}
+
+.count {
+	background-color:var(--logo-background)!important;
+	color:var(--logo-color);
+	opacity:0.8!important;
+
+}
+
+input {
+	background:var(--shadow)!important;
+}
+
+.pageTitle {
+	opacity:0.9;
+}

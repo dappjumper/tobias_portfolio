@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<title>
+			Tobias Portfolio
+		</title>
+		<link rel="stylesheet" href="/css/reset.css"/>
+		<link rel="stylesheet" href="/css/layout.css"/>
+		<link rel="stylesheet" href="/css/colors.css"/>
+		<link rel="stylesheet" href="/css/tobias.css"/>
+		<link defer rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-XxNLWSzCxOe/CFcHcAiJAZ7LarLmw3f4975gOO6QkxvULbGGNDoSOTzItGUG++Q+" crossorigin="anonymous">
+		<link defer href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#0F2027">
+		<meta name="apple-mobile-web-app-title" content="Tobias Portfolio">
+		<meta name="theme-color" content="#0F2027" />
+	</head>
+	<body class="" style="opacity:0">
+		<style>
+			body {
+				background:rgb(50,50,50);
+				transition: opacity 1s ease-out;
+			}
+		</style>
+		<div id="app">
+			<div class="container fullheight gradient_primary reduce hero">
+				<div class="fullyCentered">
+					<h1><span style="opacity:1!important;">Hi,</span> <div> this is <b>Tobias</b></div></h1>
+					<br/><br/>
+					<span class="fadeIn">Full Stack Web Developer excited about Microservices and Blockchain.</span>
+				</div>
+				<div class="waveParent"><div class="wave"></div></div>
+			</div>
+			<div class="padded container" id="content">
+				<div class="max_width">
+					<div class="container twothird fullOnMobile" style="padding-right:80px;">
+						<h2>Focus on what's important</h2>
+						<p>Being a full-stack developer has taught me that the most crucial element to reaching any goal is figuring out how to get where you need to be, which usually leads to learning new skills and reinforcing existing ones.</p>
+						<p>My biggest passion and privilege is the ability to provide highly interactive and fast web applications that perform to specification and display well in all target environments.</p>
+						<p><a target="_blank" href="/tobias/tobias_resume.pdf">Download my resume</a></p>
+						<p><a class="contactme" v-on:click="scrollTo('#contact')">Contact me</a><a style="margin-left:32px;" class="contactme" v-on:click="scrollTo('#showcase')">Portfolio</a></p>
+
+					</div>
+					<div class="container third notOnMobile">
+						<img src="/tobias/media/svg/undraw_hello.svg" class="undraw"/>
+					</div>
+				</div>
+			</div>
+			<div class="container center_text fullwidth">
+				<h2 class="max_width">Worked for these</h2>
+				<div class="">
+					<ul class="companies">
+						<li v-for="(company, index) in companies" v-bind="{style:('width: '+(100/companies.length)+'%;')}">
+							<a target="_blank" v-bind:href="company.url">
+								<img v-bind="{title:company.name, src:company.thumb}">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container center_text inverse fullwidth">
+				<div>
+				<h2 style="margin-bottom:50px">Utilized these</h2>
+					<ul class="stack">
+						<li v-for="(tech, index) in technologies" v-bind="{style:('width: '+(100/technologies.length)+'%;')}">
+							<i v-if="tech.icon" v-bind:class="{['fab fa-'+tech.icon]:(tech.icon)}"></i>
+							<img v-if="tech.thumb" v-bind:src="tech.thumb" />
+							<div class="hover">{{tech.description || tech.name}}</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="padded container" id="portfolio">
+				<div class="max_width">
+					<div class="container">
+						<h2>Real-world experience</h2>
+						<p>My biggest personal achievement must be building a chat platform with three cornerstone features: Auto-moderation, statistics, and using it to run engagement campaigns for several clients and their <b>more than 30 thousand users.</b></p>
+						<p>I am currently building a <a href="https://developers.google.com/web/progressive-web-apps" target="_blank">Progressive Web Application</a> interface for the platform mentioned above. More details to come.</p>
+						<p>In recent months my interests have grown to exploring the potential of <a target="_blank" href="https://hackernoon.com/smart-contracts-a-time-saving-primer-b3060e3e5667">smart contracts</a> and how the technology might be utilized in regard to improving transparency and security for asset-based applications.</p>
+					</div>
+				</div>
+			</div>
+			<div id="showcase">
+				<ul>
+					<li v-bind:style="item.style||''" v-for="(item, index) in portfolio">
+						<h2>{{item.name}}</h2>
+						<p class="description">{{item.summary}}</p>
+						<div class="capsules">
+							<span v-for="skill in item.skills">{{skill}}</span>
+						</div>
+						<a v-if="item.url" target="_blank" v-bind:href="item.url">{{item.url_type || 'Demo'}}</a>
+						<a v-if="item.source" target="_blank" v-bind:href="item.source">Code</a>
+						<img v-if="item.thumb" v-bind:src="item.thumb" class="thumb"/>
+						<lazyiframe v-on:click="activateIframe($event, index)" v-if="item.video" autoplay width="500" height="220" v-bind:src="item.video+'?autoplay=1'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></lazyiframe>
+					</li>
+				</ul>
+			</div>
+			<footer>
+				<div class="container center_text inverse">
+					<div class="max_width">
+						<div class="container half">
+							<h2>Find me on social</h2>
+							<ul class="social">
+								<li>
+									<a href="mailto:tobias@dappjump.io" target="_blank">
+										<i class="fa fa-envelope"></i>
+										<div class="hover">Email</div>
+									</a>
+								</li>
+								<li v-for="social in socials">
+									<a v-bind:href="social.url" target="_blank">
+										<i v-if="social.icon" v-bind:class="{['fab fa-'+social.icon]:(social.icon)}"></i>
+										<div class="hover">{{social.description || social.name}}</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container half">
+							<h2>Get in contact</h2>
+							<div id="contact" v-bind:class="{disabled:(loading.sendMessage)}">
+								<input name="email" type="text" v-model="message.from" placeholder="Your e-mail"/>
+								<textarea name="message" v-model="message.text" placeholder="Your message"></textarea>
+								<div v-on:click="errors.contact = ''" v-if="errors.contact" class="error" v-text="errors.contact"></div>
+								<div v-on:click="success.contact = ''" v-if="success.contact" class="success" v-text="success.contact"></div>
+								<button v-on:click="sendMessage()">{{(this.loading.sendMessage ? 'Sending...' : 'Send')}}</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="/js/vue.js"></script>
+		<script src="/js/tobias.js"></script>
+	</body>
+</html>
